@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int b;
+int a[5];
+
+int main(){
+  printf("size of var: %dl \n print size of arr: %dl", sizeof(b), sizeof(a));
+}

@@ -1,0 +1,7 @@
+int main(){
+  lasagna();
+}
+
+int lasagna(){
+  return 0;
+}
