@@ -1,0 +1,2 @@
+foo: stringy.c
+	gcc stringy.c

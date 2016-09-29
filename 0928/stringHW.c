@@ -33,15 +33,32 @@ char * strcatG( char *dest, char *source ){
   }
   return temp;
 }
-/*
-int strcmp( char *s1, char *s2 ){
 
+int strcmpG( char *s1, char *s2 ){
+  while (*s1 || *s2){
+    if(*s1>*s2){
+      return 1;
+    }
+    if(*s2>*s1){
+      return -1;
+    }
+    s1++;
+    s2++;
+  }
+  return 0;
 }
 
-char * strchr( char *s, char c ){
 
+char * strchrG( char *s, char c ){
+  while(*s){
+    if(*s==c){
+      return s;
+    }
+    s++;
+  }
+  return NULL;
 }
-*/
+
 int main(){
   char g[5]="str";
   printf("strlenG: %d\n", strlenG(g));
@@ -51,5 +68,9 @@ int main(){
   char v[5]="str";
   char a[10]="str";
   printf("strcatG: %s\n", strcatG(a,v));
+  char n[5]="ztr";
+  char t[5]="str";
+  printf("strcmpG: %d\n", strcmpG(n,t));
+  char p[5]="str";
+  printf("strcmpG: %d\n", strchrG(p,'t'));
 }
-//char * strncat( char *dest, char *source, int n)
