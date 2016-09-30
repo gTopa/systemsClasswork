@@ -10,7 +10,6 @@ int strlenG( char *s){
   return len;
 }
 
-
 char * strncpyG( char *dest, char *source, int n){
   char *returnDest=dest;
   while(n){
@@ -50,13 +49,13 @@ int strcmpG( char *s1, char *s2 ){
 
 
 char * strchrG( char *s, char c ){
-  while(*s){
-    if(*s==c){
-      return s;
+  while(*s!=c){
+    if(*s==0){
+      return NULL;
     }
     s++;
   }
-  return NULL;
+  return s;
 }
 
 int main(){
@@ -72,5 +71,6 @@ int main(){
   char t[5]="str";
   printf("strcmpG: %d\n", strcmpG(n,t));
   char p[5]="str";
-  printf("strcmpG: %d\n", strchrG(p,'t'));
+  printf("strchrG: %s\n", strchrG(p,'t'));
+  return 0;
 }
