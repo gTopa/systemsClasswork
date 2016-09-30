@@ -18,7 +18,6 @@ char * strncpyG( char *dest, char *source, int n){
     source++;
     n--;
   }
-  *dest=0;
   return returnDest;
 }
 
@@ -70,7 +69,8 @@ int main(){
   char n[5]="ztr";
   char t[5]="str";
   printf("strcmpG: %d\n", strcmpG(n,t));
+  printf("strcmp: %d\n", strcmp("abc","bc"));
   char p[5]="str";
-  printf("strchrG: %s\n", strchrG(p,'t'));
+  printf("strchrG: %c\n", *strchrG(p,'t'));
   return 0;
 }
