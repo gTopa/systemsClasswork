@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <unistd.h>
+
+int main(){
+  char file[]="hi.c";
+  char arg1[]="no";
+  char arg2[]="yes";
+  execlp(file,arg1,arg2,NULL);
+  return 0
+}
